@@ -1,0 +1,28 @@
+From: Board Game Bazaar <receipts@boardgamebazaar.example>
+To: collector@example.com
+Subject: Your order is confirmed - Ticket to Ride Europe Expansion
+Date: Sat, 22 Feb 2026 09:30:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b3"
+
+--b3
+Content-Type: text/plain; charset="utf-8"
+
+Your order is confirmed.
+
+Order number: BGB-55012
+1x Ticket to Ride: Europe Expansion ... $34.50 USD
+
+Total: $34.50 USD
+
+--b3
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Your order is confirmed</h1>
+<p>Order number: BGB-55012</p>
+<p><img src="https://cdn.boardgamebazaar.example/img/ttr_europe.png" alt="Ticket to Ride Europe Expansion"></p>
+<p>Ticket to Ride: Europe Expansion &mdash; $34.50 USD</p>
+</body></html>
+
+--b3--

@@ -1,0 +1,32 @@
+From: Meeple Market <ship@meeplemarket.example>
+To: collector@example.com
+Subject: Your games shipped! Order #MM-7781
+Date: Thu, 13 Feb 2026 16:02:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b2"
+
+--b2
+Content-Type: text/plain; charset="utf-8"
+
+Good news — your games are on the way.
+
+Order #MM-7781
+
+1x Azul - $40.00
+1x Codenames - $19.95
+
+Tracking: see your account.
+
+--b2
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h2>Your games shipped!</h2>
+<p>Order #MM-7781</p>
+<div><img src="https://cdn.meeplemarket.example/img/azul.jpg" alt="Azul"></div>
+<p>1x Azul - $40.00</p>
+<div><img src="https://cdn.meeplemarket.example/img/codenames.jpg" alt="Codenames"></div>
+<p>1x Codenames - $19.95</p>
+</body></html>
+
+--b2--

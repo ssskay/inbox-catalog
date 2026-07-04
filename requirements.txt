@@ -1,0 +1,30 @@
+# Inbox Catalog dependencies.
+#
+# The engine is layered so the non-embedding paths (--stats, dry-run ingest,
+# offline fixtures) run on the Python standard library alone. Heavy/optional
+# deps are lazy-imported and only needed for the feature that uses them.
+
+# --- Core ingest (image download during --apply) ---------------------------
+numpy>=1.24            # vector math for the image index
+requests>=2.31         # download product images during --apply
+
+# --- Image index + photo lookup (local CLIP, $0 at runtime; lazy-imported) --
+# Only required for `--reindex` and `lookup`. Install when you want photo search.
+sentence-transformers>=2.2
+torch>=2.0
+Pillow>=10.0
+
+# --- Optional: LLM fallback for emails no template can parse (opt-in --llm) --
+anthropic>=0.40
+
+# --- Optional: read-only "Sign in with Google" (connect; Gmail-backed ingest) --
+# Only needed if you connect Gmail instead of using an IMAP app password. The
+# Google libraries are lazy-imported, so every other path runs without them.
+google-auth>=2.0
+google-auth-oauthlib>=1.0
+google-api-python-client>=2.0
+
+# Install everything:
+#   pip3 install -r requirements.txt
+# Minimal (offline fixtures, dry-run, stats):
+#   pip3 install numpy        # requests only needed once you use --apply

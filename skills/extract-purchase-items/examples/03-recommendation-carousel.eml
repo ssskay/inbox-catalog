@@ -1,0 +1,55 @@
+From: Board Game Bazaar <receipts@boardgamebazaar.example>
+To: collector@example.com
+Subject: Your order is confirmed - Azul
+Date: Sat, 07 Mar 2026 11:05:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b7"
+
+--b7
+Content-Type: text/plain; charset="utf-8"
+
+Your order is confirmed. Thanks for shopping with Board Game Bazaar!
+
+Order number: BGB-55190
+
+Your items:
+1x Azul ... $39.99 USD
+
+Subtotal: $39.99 USD
+Shipping: $4.99 USD
+Total: $44.98 USD
+
+------------------------------------------------------------
+Recommended for you
+You might also like these top-rated games:
+  - Wingspan ... $65.00 USD
+  - Catan ... $44.00 USD
+  - Carcassonne ... $32.00 USD
+Shop now and complete your collection!
+
+--b7
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Your order is confirmed</h1>
+<p>Order number: BGB-55190</p>
+<table class="order-items"><tr>
+  <td><img src="https://cdn.boardgamebazaar.example/img/azul.png" alt="Azul"></td>
+  <td>Azul &mdash; $39.99 USD</td>
+</tr></table>
+<p>Subtotal: $39.99 USD</p>
+<p>Shipping: $4.99 USD</p>
+<p>Total: $44.98 USD</p>
+
+<section class="recommendations">
+  <h2>Recommended for you</h2>
+  <p>You might also like these top-rated games:</p>
+  <div class="carousel">
+    <figure><img src="https://cdn.boardgamebazaar.example/img/wingspan.png" alt="Wingspan"><figcaption>Wingspan &mdash; $65.00 USD</figcaption></figure>
+    <figure><img src="https://cdn.boardgamebazaar.example/img/catan.png" alt="Catan"><figcaption>Catan &mdash; $44.00 USD</figcaption></figure>
+    <figure><img src="https://cdn.boardgamebazaar.example/img/carcassonne.png" alt="Carcassonne"><figcaption>Carcassonne &mdash; $32.00 USD</figcaption></figure>
+  </div>
+</section>
+</body></html>
+
+--b7--

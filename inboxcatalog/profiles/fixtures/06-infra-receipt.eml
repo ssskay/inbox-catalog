@@ -1,0 +1,27 @@
+From: Cloudflare Billing <billing@cloudflare.example>
+To: collector@example.com
+Subject: Your receipt from Cloudflare
+Date: Wed, 26 Feb 2026 03:00:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b6"
+
+--b6
+Content-Type: text/plain; charset="utf-8"
+
+Receipt for your monthly subscription.
+
+Order #CF-90001
+Pro Plan ... $20.00 USD
+
+Total: $20.00 USD
+
+--b6
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Your receipt</h1>
+<p>Order #CF-90001</p>
+<p>Pro Plan &mdash; $20.00 USD</p>
+</body></html>
+
+--b6--

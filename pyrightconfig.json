@@ -1,0 +1,11 @@
+{
+  "include": ["inboxcatalog"],
+  "exclude": ["**/__pycache__", "data", ".venv", "venv"],
+  "extraPaths": ["."],
+  "pythonVersion": "3.10",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "error",
+  "executionEnvironments": [
+    { "root": ".", "extraPaths": ["."] }
+  ]
+}

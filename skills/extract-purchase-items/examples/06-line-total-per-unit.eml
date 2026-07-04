@@ -1,0 +1,40 @@
+From: Board Game Bazaar <receipts@boardgamebazaar.example>
+To: collector@example.com
+Subject: Your order is confirmed #BGB-60123
+Date: Mon, 16 Mar 2026 09:10:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b9"
+
+--b9
+Content-Type: text/plain; charset="utf-8"
+
+Thanks for your order!
+
+Order #BGB-60123
+
+Order summary
+  Catan x 2
+  $88.00
+
+  Welcome Promo Pack x 1
+  Free
+
+Subtotal   $88.00
+Shipping   $5.00
+Total      $93.00 USD
+
+--b9
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Thanks for your order!</h1>
+<p>Order #BGB-60123</p>
+<table>
+  <tr><td>Catan &times; 2</td><td>$88.00</td></tr>
+  <tr><td>Welcome Promo Pack &times; 1</td><td>Free</td></tr>
+</table>
+<p>Subtotal $88.00</p>
+<p>Total $93.00 USD</p>
+</body></html>
+
+--b9--

@@ -1,0 +1,14 @@
+{
+  "name": "inbox-catalog",
+  "description": "Sara Kay's inbox-catalog plugin — email→catalog engine + Amazon returns tracker.",
+  "owner": { "name": "Sara Kay" },
+  "plugins": [
+    {
+      "name": "inbox-catalog",
+      "source": "./",
+      "description": "Turn order/shipment/receipt emails into a structured, read-only catalog of what you own, with an Amazon returns tracker. Try the whole thing on synthetic demo data before connecting any mail.",
+      "category": "productivity",
+      "tags": ["email", "orders", "catalog", "returns", "inventory"]
+    }
+  ]
+}

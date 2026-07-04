@@ -1,0 +1,33 @@
+From: "Amazon.com" <auto-confirm@amazon.com>
+To: demo@example.com
+Subject: Your Amazon.com order #114-8812733-1054420
+Date: Fri, 26 Jun 2026 20:55:00 -0400
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b4"
+
+--b4
+Content-Type: text/plain; charset="utf-8"
+
+Order Confirmation
+
+Order #114-8812733-1054420
+Placed on June 26, 2026
+Arriving: June 30, 2026
+
+Items in this order:
+1 x Anime Collectible Figure 4 inch - $22.99
+1 x Manga Volume 1 Paperback - $9.99
+
+Order Total: $32.98
+
+--b4
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Order #114-8812733-1054420</p>
+<img src="https://m.media.example/images/I/anime_figure.jpg" alt="Anime Collectible Figure" width="200">
+<p>1 x Anime Collectible Figure 4 inch - $22.99</p>
+<p>1 x Manga Volume 1 Paperback - $9.99</p>
+</body></html>
+
+--b4--

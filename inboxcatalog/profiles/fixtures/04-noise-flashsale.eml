@@ -1,0 +1,23 @@
+From: Tabletop Trove <news@tabletoptrove.example>
+To: collector@example.com
+Subject: 48 hours only: 20% off your next order!
+Date: Sun, 23 Feb 2026 08:00:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b4"
+
+--b4
+Content-Type: text/plain; charset="utf-8"
+
+Flash sale! 20% off everything this weekend. Your cart misses you.
+Shop now and save on your next board game order.
+
+--b4
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>20% off everything!</h1>
+<p><img src="https://cdn.tabletoptrove.example/img/banner_sale.jpg" alt="sale"></p>
+<p>Shop now and save on your next order.</p>
+</body></html>
+
+--b4--

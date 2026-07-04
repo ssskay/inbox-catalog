@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Azul",
+      "maker": "Meeple Market",
+      "price": 40.00,
+      "currency": "USD",
+      "quantity": 1,
+      "order_id": "MM-7781"
+    },
+    {
+      "name": "Codenames",
+      "maker": "Meeple Market",
+      "price": 19.95,
+      "currency": "USD",
+      "quantity": 1,
+      "order_id": "MM-7781"
+    }
+  ]
+}

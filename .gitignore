@@ -1,0 +1,32 @@
+# Runtime data — DB and downloaded images are never committed
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Private/local profiles (keep your real allowlists out of the public repo)
+inboxcatalog/profiles/private*.py
+inboxcatalog/profiles/fixtures/private*/
+
+# Local life-zone taxonomy override (your own zones/labels/signals — never
+# committed; the engine ships generic defaults). See references/life-zone-routing.md.
+inboxcatalog/profiles/zones.local.json
+inboxcatalog/profiles/*.local.json
+
+# Secrets — there is no .env by design, but be safe
+.env
+*.key
+*.pem
+
+# Local session handoffs (working notes, not part of the public repo)
+HANDOFF.md
+.cx/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "name": "inbox-catalog",
+  "displayName": "Inbox Catalog",
+  "version": "0.1.0",
+  "description": "Local-first, read-only engine that turns order/shipment/receipt emails into a structured catalog of what you own — plus an Amazon returns tracker. Runs a zero-setup synthetic demo before touching any real mail.",
+  "author": { "name": "Sara Kay" },
+  "homepage": "https://github.com/ssskay/inbox-catalog",
+  "repository": "https://github.com/ssskay/inbox-catalog",
+  "license": "MIT",
+  "keywords": ["email", "orders", "catalog", "returns", "amazon", "inventory", "offline", "read-only"],
+  "skills": [
+    "./",
+    "./amazon-tracker"
+  ]
+}

@@ -1,0 +1,35 @@
+From: Meeple Market <orders@meeplemarket.example>
+To: collector@example.com
+Subject: Order confirmation #MM-8042
+Date: Sat, 14 Mar 2026 13:20:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b8"
+
+--b8
+Content-Type: text/plain; charset="utf-8"
+
+Thanks for your order!
+
+Order #MM-8042
+
+2x Carcassonne - $32.00 each
+1x Dixit - $30.00
+
+Subtotal: $94.00 USD
+Shipping: $0.00 USD
+Total: $94.00 USD
+
+--b8
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Thanks for your order!</h1>
+<p>Order #MM-8042</p>
+<table>
+  <tr><td>2x Carcassonne</td><td>$32.00 each</td></tr>
+  <tr><td>1x Dixit</td><td>$30.00</td></tr>
+</table>
+<p>Total: $94.00 USD</p>
+</body></html>
+
+--b8--

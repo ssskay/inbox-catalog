@@ -1,0 +1,28 @@
+From: Tabletop Trove <orders@tabletoptrove.example>
+To: collector@example.com
+Subject: Order confirmation: Premium Card Sleeves (100ct)
+Date: Tue, 25 Feb 2026 12:45:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b5"
+
+--b5
+Content-Type: text/plain; charset="utf-8"
+
+Thanks for your order!
+
+Order #TT-10590
+1x Premium Card Sleeves (100ct) ... $6.99 USD
+
+Total: $6.99 USD
+
+--b5
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Thanks for your order!</h1>
+<p>Order #TT-10590</p>
+<p><img src="https://cdn.tabletoptrove.example/img/sleeves.jpg" alt="Card Sleeves"></p>
+<p>Premium Card Sleeves (100ct) &mdash; $6.99 USD</p>
+</body></html>
+
+--b5--

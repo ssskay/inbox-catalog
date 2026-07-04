@@ -1,0 +1,33 @@
+From: Tabletop Trove <orders@tabletoptrove.example>
+To: collector@example.com
+Subject: Order confirmation: Wingspan
+Date: Mon, 03 Feb 2026 10:14:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset="utf-8"
+
+Thanks for your order!
+
+Order #TT-10428
+1x Wingspan (strategy engine-builder) ... $65.00 USD
+
+Subtotal: $65.00 USD
+Shipping: $0.00 USD
+Total: $65.00 USD
+
+--b1
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Thanks for your order!</h1>
+<p>Order #TT-10428</p>
+<table><tr>
+  <td><img src="https://cdn.tabletoptrove.example/img/wingspan_box.jpg" alt="Wingspan"></td>
+  <td>Wingspan &mdash; $65.00 USD</td>
+</tr></table>
+<p>Total: $65.00 USD</p>
+</body></html>
+
+--b1--

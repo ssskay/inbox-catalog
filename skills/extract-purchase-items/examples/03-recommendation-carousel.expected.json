@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "name": "Azul",
+      "maker": "Board Game Bazaar",
+      "price": 39.99,
+      "currency": "USD",
+      "quantity": 1,
+      "order_id": "BGB-55190"
+    }
+  ]
+}

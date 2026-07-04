@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Catan",
+      "maker": "Board Game Bazaar",
+      "price": 44.00,
+      "currency": "USD",
+      "quantity": 2,
+      "order_id": "BGB-60123"
+    },
+    {
+      "name": "Welcome Promo Pack",
+      "maker": "Board Game Bazaar",
+      "price": 0.00,
+      "currency": "USD",
+      "quantity": 1,
+      "order_id": "BGB-60123"
+    }
+  ]
+}

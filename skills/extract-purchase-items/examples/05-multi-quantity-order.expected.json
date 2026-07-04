@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Carcassonne",
+      "maker": "Meeple Market",
+      "price": 32.00,
+      "currency": "USD",
+      "quantity": 2,
+      "order_id": "MM-8042"
+    },
+    {
+      "name": "Dixit",
+      "maker": "Meeple Market",
+      "price": 30.00,
+      "currency": "USD",
+      "quantity": 1,
+      "order_id": "MM-8042"
+    }
+  ]
+}

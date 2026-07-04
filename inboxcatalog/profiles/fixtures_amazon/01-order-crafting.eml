@@ -1,0 +1,40 @@
+From: "Amazon.com" <auto-confirm@amazon.com>
+To: demo@example.com
+Subject: Your Amazon.com order #113-2591024-7364219
+Date: Thu, 18 Jun 2026 09:12:00 -0400
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset="utf-8"
+
+Order Confirmation
+
+Hello, thank you for your order.
+
+Order #113-2591024-7364219
+Placed on June 18, 2026
+Arriving: June 24, 2026
+
+Items in this order:
+2 x Craft Vinyl Roll 12x5ft Matte - $12.99 each
+1 x Acrylic Sheets 3mm Clear 10 Pack 12x12 inch - $34.50
+
+Order Total: $60.48
+
+--b1
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h1>Order Confirmation</h1>
+<p>Order #113-2591024-7364219</p>
+<table><tr>
+  <td><img src="https://m.media.example/images/I/craft_vinyl_roll.jpg" alt="Craft Vinyl Roll" width="200"></td>
+  <td>2 x Craft Vinyl Roll 12x5ft Matte - $12.99 each</td>
+</tr><tr>
+  <td>1 x Acrylic Sheets 3mm Clear 10 Pack 12x12 inch - $34.50</td>
+</tr></table>
+<p>Order Total: $60.48</p>
+</body></html>
+
+--b1--

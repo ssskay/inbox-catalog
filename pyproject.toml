@@ -1,0 +1,74 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inbox-catalog"
+description = "Privacy-first engine that turns your purchase/shipment emails into an image-searchable catalog of the physical things you own."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sara Kay" }]
+requires-python = ">=3.10"
+keywords = ["imap", "email", "catalog", "clip", "embeddings", "inventory"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Utilities",
+]
+dynamic = ["version"]
+
+# Core engine: the --stats, offline-fixture, and dry-run paths run on these
+# alone. `requests` is only exercised by image downloads during --apply (it is
+# lazy-imported, so a dry run never needs it), but it is a genuine runtime dep
+# of the core ingest path, so it lives here rather than in an extra.
+dependencies = [
+    "numpy>=1.24",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+# Local CLIP image index + photo lookup (`--reindex`, `lookup`). Heavy, and only
+# needed for image search, so opt-in: `pip install inbox-catalog[embed]`.
+embed = [
+    "sentence-transformers>=2.2",
+    "torch>=2.0",
+    "Pillow>=10.0",
+]
+# Optional LLM fallback for emails no template can parse (`--llm`).
+llm = [
+    "anthropic>=0.40",
+]
+# Read-only "Sign in with Google" path (`connect`, then Gmail-backed ingest).
+# Only needed if you connect Gmail instead of using an IMAP app password.
+gmail = [
+    "google-auth>=2.0",
+    "google-auth-oauthlib>=1.0",
+    "google-api-python-client>=2.0",
+]
+
+[project.scripts]
+inboxcatalog = "inboxcatalog.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ssskay/inbox-catalog"
+Repository = "https://github.com/ssskay/inbox-catalog"
+
+[tool.hatch.version]
+path = "inboxcatalog/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["inboxcatalog"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/inboxcatalog",
+    "/README.md",
+    "/LICENSE",
+    "/requirements.txt",
+]
