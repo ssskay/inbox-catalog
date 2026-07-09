@@ -26,23 +26,34 @@ mail.
 
 ## Running the commands (do this first)
 
-Every `python3 -m inboxcatalog …` command must run from the **engine root** — the
-folder that contains the `inboxcatalog/` package (and this `SKILL.md`). How to get
-there depends on how this was installed:
+Everything runs through the module invocation `python3 -m inboxcatalog …` — the
+engine behaves identically however it was installed. The only question is whether
+that module is already importable from where you are:
 
-- **Installed as a Claude Code plugin:** the engine root is `$CLAUDE_PLUGIN_ROOT`.
-  Start with `cd "$CLAUDE_PLUGIN_ROOT"`.
-- **Cloned the repo / copied the folder into `~/.claude/skills/`:** the engine root
-  is this skill's own folder.
+- **Installed via pip / pipx** (`pip install inbox-catalog`): the module is on the
+  Python path, so `python3 -m inboxcatalog …` works from **any** directory. No
+  `cd` needed. The catalog lives in a per-user data dir (see below), not in a
+  checkout.
+- **Installed as a Claude Code plugin, or a clone / copy into `~/.claude/skills/`:**
+  the package isn't pip-installed, so run from the **engine root** — the folder
+  that contains the `inboxcatalog/` package (and this `SKILL.md`). For a plugin,
+  that's `$CLAUDE_PLUGIN_ROOT`; for a clone, it's this skill's own folder. `cd`
+  there first:
 
-So begin each run by changing into the engine root, e.g.:
+      cd "${CLAUDE_PLUGIN_ROOT:-.}"    # plugin → engine root; clone → already there
 
-    cd "${CLAUDE_PLUGIN_ROOT:-.}"      # plugin install → engine root; else assume you're already there
+`$CLAUDE_PLUGIN_ROOT` locates **skill assets** (this doc, fixtures, references) —
+it is not how a pip install finds the engine. If a bare `python3 -m inboxcatalog
+--stats` fails with `No module named inboxcatalog`, you're not pip-installed and
+not in the engine root — `cd` there (see above) and retry. No `pip install` is
+needed for the offline demo, `--stats`, or any dry run; those run on the Python
+standard library alone.
 
-If a bare `python3 -m inboxcatalog --stats` fails with `No module named
-inboxcatalog`, you are not in the engine root — `cd` there (see above) and retry.
-No `pip install` is needed for the offline demo, `--stats`, or any dry run; those
-run on the Python standard library alone.
+**Where the catalog is stored.** `$INBOX_DATA_DIR` overrides it if set. Otherwise
+a repo/clone checkout writes to its own `data/` dir, while a pip install (no
+checkout) uses a per-user state dir — `~/Library/Application Support/inbox-catalog`
+on macOS, `$XDG_STATE_HOME/inbox-catalog` (default `~/.local/state/inbox-catalog`)
+on Linux. Each run logs the chosen data dir at startup.
 
 ## When to use
 

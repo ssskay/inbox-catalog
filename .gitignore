@@ -30,3 +30,8 @@ venv/
 .mypy_cache/
 .pytest_cache/
 .DS_Store
+
+# Build artifacts (sdist + wheel from `python3 -m build`)
+dist/
+build/
+*.egg-info/

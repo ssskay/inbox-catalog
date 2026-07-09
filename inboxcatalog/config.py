@@ -13,13 +13,61 @@ is never written to disk or logged.
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 
+APP_NAME = "inbox-catalog"
+
 # --- Paths -----------------------------------------------------------------
-# Everything runtime-generated lives under data/ (gitignored). Images are kept
-# on disk next to their sha256 so the DB stays small and the files are portable.
+# Everything runtime-generated lives under a data dir (gitignored in a checkout).
+# Images are kept on disk next to their sha256 so the DB stays small and the
+# files are portable.
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = Path(os.environ.get("INBOX_DATA_DIR", ROOT / "data"))
+
+
+def platform_state_dir() -> Path:
+    """Per-user state directory, used when there's no repo-local ``data/``.
+
+    This is the home for pip/pipx installs, where the engine lives in
+    site-packages and there is no checkout to write beside.
+
+    macOS:             ~/Library/Application Support/inbox-catalog
+    Linux/other POSIX: $XDG_STATE_HOME/inbox-catalog
+                       (fallback ~/.local/state/inbox-catalog)
+    """
+    # ``current`` is annotated ``str`` (not the ``sys.platform`` literal) so a
+    # static checker can't fold this platform branch to one side on the host it
+    # happens to run on — both the macOS and POSIX paths stay live.
+    current: str = sys.platform
+    if current == "darwin":
+        return Path.home() / "Library" / "Application Support" / APP_NAME
+    base = os.environ.get("XDG_STATE_HOME") or str(Path.home() / ".local" / "state")
+    return Path(base) / APP_NAME
+
+
+def resolve_data_dir() -> tuple[Path, str]:
+    """Decide where runtime state (DB + images) lives, and why.
+
+    Precedence, mirroring internet-historian's platform-dir resolution:
+
+    1. ``$INBOX_DATA_DIR`` — an explicit override always wins (existing behavior).
+    2. A repo-local ``data/`` dir that already exists — an in-place git checkout
+       keeps writing beside the code, so nothing changes for repo users.
+    3. Otherwise the per-user platform state dir — the pip/pipx default, where
+       there is no checkout. Nothing is moved or migrated.
+
+    Returns the chosen directory plus a short source label for startup logging.
+    """
+    env = os.environ.get("INBOX_DATA_DIR")
+    if env:
+        return Path(env), "$INBOX_DATA_DIR"
+    repo_data = ROOT / "data"
+    if repo_data.is_dir():
+        return repo_data, "repo checkout"
+    return platform_state_dir(), "platform state dir"
+
+
+DATA_DIR, DATA_DIR_SOURCE = resolve_data_dir()
 DB_PATH = Path(os.environ.get("INBOX_DB", DATA_DIR / "catalog.db"))
 IMAGES_DIR = DATA_DIR / "images"
 

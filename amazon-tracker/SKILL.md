@@ -29,22 +29,27 @@ real mail.
 
 This skill is a thin wrapper over the **inbox-catalog** engine — the same
 generic email→catalog core the Inbox Catalog skill uses, selected here with
-`--profile amazon`. The skill keeps no private copy of the engine. Locate the
-engine root (the folder containing the `inboxcatalog/` package) in this order:
+`--profile amazon`. The skill keeps no private copy of the engine. Every command
+below runs through `python3 -m inboxcatalog …`; the engine behaves identically
+however it was installed. You just need that module importable:
 
-1. `$CLAUDE_PLUGIN_ROOT` if set — this skill is installed as part of the
-   inbox-catalog **plugin**, and the engine sits at the plugin root, else
-2. `$INBOX_CATALOG_ROOT` if set, else
-3. an `inbox-catalog/` folder next to this skill folder, else
-4. `~/inbox-catalog`, else `~/.claude/skills/inbox-catalog`.
+- **Installed via pip / pipx** (`pip install inbox-catalog`): the module is on the
+  Python path — `python3 -m inboxcatalog …` works from **any** directory, no `cd`.
+- **Otherwise** (plugin, clone, or copy) locate the engine root — the folder
+  containing the `inboxcatalog/` package — in this order, and `cd` into it first:
+  1. `$CLAUDE_PLUGIN_ROOT` if set — this skill is installed as part of the
+     inbox-catalog **plugin**, and the engine sits at the plugin root, else
+  2. `$INBOX_CATALOG_ROOT` if set, else
+  3. an `inbox-catalog/` folder next to this skill folder, else
+  4. `~/inbox-catalog`, else `~/.claude/skills/inbox-catalog`.
 
-If none exists, have the user get it first:
+  If none exists, have the user get it (`pip install inbox-catalog`, or
+  `git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog`), then
+  `cd` into the engine root (e.g. `cd "$CLAUDE_PLUGIN_ROOT"` for a plugin).
 
-    git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog
-
-`cd` into that engine root before running any command below (e.g.
-`cd "$CLAUDE_PLUGIN_ROOT"` for a plugin install). The offline demo, `--stats`,
-and every dry run need **no** `pip install` — they run on the Python standard
+`$CLAUDE_PLUGIN_ROOT` locates **skill assets**, not the engine — a pip install
+finds the engine on the Python path. The offline demo, `--stats`, and every dry
+run need **no** `pip install` of dependencies — they run on the Python standard
 library. Only live mail (`--imap`/`--mbox` with `--apply`) and photo features
 need deps: `pip3 install --break-system-packages -r requirements.txt` (no venvs).
 

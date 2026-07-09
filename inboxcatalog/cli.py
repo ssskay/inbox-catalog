@@ -418,6 +418,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
     log = logutil.setup(debug=args.debug)
+    log.info("data dir: %s (%s)", config.DATA_DIR, config.DATA_DIR_SOURCE)
 
     if args.command == "doctor":
         return _cmd_doctor(args, log)
