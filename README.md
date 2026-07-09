@@ -14,6 +14,8 @@ bought stops being out of sight, out of mind.
 It runs on your machine. Nothing is uploaded. Mail is opened strictly
 **read-only** — it can't send, delete, move, or flag anything.
 
+![A pile of identical Amazon order emails on the left becomes a returns dashboard on the right: items ranked by days left in their return window, an expired warning, and purchases triaged into life zones. All data shown is synthetic.](docs/assets/inbox-catalog-demo.svg)
+
 ## Why this exists
 
 I buy a lot of small things from a lot of small shops. After a good sale, half of

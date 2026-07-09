@@ -1,0 +1,120 @@
+<svg viewBox="0 0 1200 675" width="1200" height="675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inbox Catalog demo: a pile of Amazon order emails becomes a returns dashboard with a return-window clock. All data shown is synthetic.">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="675" fill="#0d1117"/>
+
+  <!-- header -->
+  <text class="sans" x="60" y="56" font-size="30" font-weight="700" fill="#e6edf3">Inbox Catalog</text>
+  <text class="sans" x="60" y="84" font-size="16" fill="#8b949e">your order emails, read back as a catalog of what you own</text>
+  <rect x="828" y="38" width="312" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="984" y="58" font-size="13" fill="#8b949e" text-anchor="middle">local-first  ·  read-only  ·  synthetic demo data</text>
+
+  <!-- panel labels -->
+  <text class="sans" x="60" y="132" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="2">YOUR INBOX</text>
+  <text class="sans" x="540" y="132" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="2">YOUR CATALOG</text>
+
+  <!-- ============ left: email pile ============ -->
+  <rect x="60" y="145" width="400" height="450" rx="10" fill="#f6f8fa" stroke="#30363d"/>
+  <!-- inbox header -->
+  <text class="sans" x="80" y="172" font-size="14" font-weight="700" fill="#24292f">📥 Inbox — Orders</text>
+  <text class="sans" x="440" y="172" font-size="12" fill="#57606a" text-anchor="end">2,847</text>
+  <line x1="60" y1="184" x2="460" y2="184" stroke="#d0d7de"/>
+
+  <!-- rows -->
+  <g class="sans">
+    <!-- row 1 -->
+    <circle cx="78" cy="207" r="3.5" fill="#0969da"/>
+    <text x="92" y="211" font-size="13" font-weight="600" fill="#24292f">Amazon.com</text>
+    <text x="440" y="211" font-size="11" fill="#57606a" text-anchor="end">9:14 AM</text>
+    <text x="92" y="230" font-size="12.5" fill="#57606a">Your Amazon.com order #113-2591024-7364219</text>
+    <line x1="76" y1="244" x2="444" y2="244" stroke="#d0d7de"/>
+    <!-- row 2 -->
+    <circle cx="78" cy="267" r="3.5" fill="#0969da"/>
+    <text x="92" y="271" font-size="13" font-weight="600" fill="#24292f">Amazon.com</text>
+    <text x="440" y="271" font-size="11" fill="#57606a" text-anchor="end">Tue</text>
+    <text x="92" y="290" font-size="12.5" fill="#57606a">Shipped: your Amazon.com order #113-2591024-736…</text>
+    <line x1="76" y1="304" x2="444" y2="304" stroke="#d0d7de"/>
+    <!-- row 3 -->
+    <circle cx="78" cy="327" r="3.5" fill="#0969da"/>
+    <text x="92" y="331" font-size="13" font-weight="600" fill="#24292f">Amazon.com</text>
+    <text x="440" y="331" font-size="11" fill="#57606a" text-anchor="end">Tue</text>
+    <text x="92" y="350" font-size="12.5" fill="#57606a">Delivered: your Amazon.com order #113-2591024-73…</text>
+    <line x1="76" y1="364" x2="444" y2="364" stroke="#d0d7de"/>
+    <!-- row 4 -->
+    <circle cx="78" cy="387" r="3.5" fill="#cf222e"/>
+    <text x="92" y="391" font-size="13" font-weight="600" fill="#24292f">Amazon.com</text>
+    <text x="440" y="391" font-size="11" fill="#57606a" text-anchor="end">Mon</text>
+    <text x="92" y="410" font-size="12.5" fill="#57606a">Your return window for order #114-8812733… closes soon</text>
+    <line x1="76" y1="424" x2="444" y2="424" stroke="#d0d7de"/>
+    <!-- row 5 -->
+    <circle cx="78" cy="447" r="3.5" fill="#0969da"/>
+    <text x="92" y="451" font-size="13" font-weight="600" fill="#24292f">Amazon.com</text>
+    <text x="440" y="451" font-size="11" fill="#57606a" text-anchor="end">Jun 26</text>
+    <text x="92" y="470" font-size="12.5" fill="#57606a">Your Amazon.com order #114-5528190-2217743</text>
+    <line x1="76" y1="484" x2="444" y2="484" stroke="#d0d7de"/>
+    <!-- row 6 -->
+    <circle cx="78" cy="507" r="3.5" fill="#d0d7de"/>
+    <text x="92" y="511" font-size="13" font-weight="600" fill="#57606a">Amazon.com</text>
+    <text x="440" y="511" font-size="11" fill="#57606a" text-anchor="end">Jun 26</text>
+    <text x="92" y="530" font-size="12.5" fill="#8b949e" font-style="italic">Deals for you: 25% off home &amp; kitchen this week</text>
+    <line x1="76" y1="544" x2="444" y2="544" stroke="#d0d7de"/>
+    <!-- fade row -->
+    <text x="92" y="572" font-size="12.5" fill="#8b949e" font-style="italic">…and every order you've already forgotten about</text>
+  </g>
+
+  <!-- ============ arrow ============ -->
+  <path d="M 472 362 L 516 362 L 516 350 L 534 370 L 516 390 L 516 378 L 472 378 Z" fill="#3fb950"/>
+
+  <!-- ============ right: terminal ============ -->
+  <rect x="546" y="145" width="594" height="450" rx="10" fill="#161b22" stroke="#30363d"/>
+  <!-- title bar -->
+  <circle cx="568" cy="164" r="6" fill="#ff5f57"/>
+  <circle cx="588" cy="164" r="6" fill="#febc2e"/>
+  <circle cx="608" cy="164" r="6" fill="#28c840"/>
+  <text class="sans" x="843" y="169" font-size="12" fill="#8b949e" text-anchor="middle">inbox-catalog — demo</text>
+  <line x1="546" y1="180" x2="1140" y2="180" stroke="#30363d"/>
+
+  <!-- terminal text -->
+  <g class="mono" font-size="12.5">
+    <text x="566" y="206"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> pip install inbox-catalog</tspan></text>
+    <text x="566" y="226"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> inboxcatalog --profile amazon --returns</tspan></text>
+
+    <text x="566" y="256" fill="#79c0ff">==== Returns — 2026-07-09 (policy window 30d) ====</text>
+    <text x="566" y="278" fill="#e6edf3">Still returnable (7) — most urgent first:</text>
+    <text x="566" y="298" fill="#c9d1d9">  [1] Craft Vinyl Roll 12x5ft Matte</text>
+    <text x="960" y="298" fill="#79c0ff" text-anchor="end">25.98 USD ×2</text>
+    <text x="1120" y="298" fill="#d29922" text-anchor="end">⏳ 15 days left</text>
+    <text x="566" y="318" fill="#c9d1d9">  [2] Acrylic Sheets 3mm Clear 10 Pack</text>
+    <text x="960" y="318" fill="#79c0ff" text-anchor="end">34.50 USD</text>
+    <text x="1120" y="318" fill="#d29922" text-anchor="end">⏳ 15 days left</text>
+    <text x="566" y="338" fill="#c9d1d9">  [4] Manga Volume 1 Paperback</text>
+    <text x="960" y="338" fill="#79c0ff" text-anchor="end">9.99 USD</text>
+    <text x="1120" y="338" fill="#d29922" text-anchor="end">⏳ 17 days left</text>
+    <text x="566" y="358" fill="#c9d1d9">  [6] Mechanical Keyboard 75% RGB</text>
+    <text x="960" y="358" fill="#79c0ff" text-anchor="end">129.99 USD</text>
+    <text x="1120" y="358" fill="#d29922" text-anchor="end">⏳ 19 days left</text>
+    <text x="566" y="378" fill="#8b949e">  …3 more</text>
+    <text x="566" y="400" fill="#e6edf3">Expired (2):</text>
+    <text x="566" y="420" fill="#c9d1d9">  [3] Anime Collectible Figure 4 inch</text>
+    <text x="960" y="420" fill="#79c0ff" text-anchor="end">22.99 USD</text>
+    <text x="1120" y="420" fill="#f85149" text-anchor="end">expired 1d ago</text>
+
+    <text x="566" y="450"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> inboxcatalog --profile amazon --triage</tspan></text>
+
+    <text x="566" y="480" fill="#c9d1d9">🔨 Crafting (2)   🌟 Fandom &amp; Fun (2)   🏷️ Resale (1)</text>
+    <text x="566" y="502" fill="#c9d1d9">💼 Work &amp; Office (1)   🎁 Gifts (1)   🏃 Fitness (1)</text>
+    <text x="566" y="524" fill="#8b949e">unrouted (1) — needs your call: Bamboo Cutting Board</text>
+    <text x="566" y="552" fill="#d29922">💰 Spend flags: 1 item over $75 · 5 orders within 7 days</text>
+    <text x="566" y="578"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> ▌</tspan></text>
+  </g>
+
+  <!-- footer -->
+  <text class="sans" x="60" y="640" font-size="13" fill="#8b949e">github.com/ssskay/inbox-catalog   ·   pip install inbox-catalog</text>
+  <text class="sans" x="1140" y="640" font-size="13" fill="#8b949e" text-anchor="end">every email &amp; item shown is synthetic (@example.com) — no real inbox harmed</text>
+</svg>
