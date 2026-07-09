@@ -1,0 +1,34 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.12"]
+        include:
+          - os: ubuntu-latest
+            python: "3.10"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest
+      - name: unit tests (offline, stdlib)
+        run: python -m pytest tests/ skills/extract-purchase-items/test_examples.py -q
+      - name: demo end-to-end (fixtures, no network)
+        shell: bash
+        run: |
+          export INBOX_DATA_DIR="$RUNNER_TEMP/ic-demo"
+          python -m inboxcatalog --profile amazon --ingest --fixtures --apply
+          python -m inboxcatalog --profile amazon --returns
+          python -m inboxcatalog --profile amazon --triage
+          python -m inboxcatalog --stats
