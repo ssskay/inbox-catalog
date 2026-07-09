@@ -1,5 +1,9 @@
 # Inbox Catalog
 
+[![PyPI](https://img.shields.io/pypi/v/inbox-catalog)](https://pypi.org/project/inbox-catalog/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://pypi.org/project/inbox-catalog/)
+
 Your inbox already knows everything you've bought. It's just trapped in a pile of
 order confirmations you'll never scroll back through.
 
@@ -58,9 +62,9 @@ needs, and which always stays read-only):
 Want to see it work before connecting anything? There's a zero-setup demo built
 in. 👇
 
-## Install (Claude Code)
+## Install
 
-Two slash commands in Claude Code:
+**Claude Code** (the full experience — you just talk to it). Two slash commands:
 
 ```
 /plugin marketplace add ssskay/inbox-catalog
@@ -72,7 +76,15 @@ bundled set of demo orders and hands you back a catalog — four board games wit
 makers, prices, and categories. No mailbox, no credentials, no risk. That's the
 whole experience, minus your actual stuff.
 
-Not on the plugin system? Copy the folder in instead:
+**Just the engine** (any terminal, no Claude required):
+
+```bash
+pip install inbox-catalog
+python3 -m inboxcatalog --ingest --fixtures --apply   # same zero-credential demo
+python3 -m inboxcatalog --stats
+```
+
+Not on the plugin system but want the Claude skills? Copy the folder in instead:
 
 ```bash
 git clone https://github.com/ssskay/inbox-catalog ~/.claude/skills/inbox-catalog

@@ -23,6 +23,12 @@ There are two ways to use it:
 /plugin install inbox-catalog@inbox-catalog
 ```
 
+**Or pip install it** (just the engine, runs from any directory):
+
+```bash
+pip install inbox-catalog
+```
+
 **Or clone it** (works with or without the plugin system):
 
 ```bash
@@ -30,8 +36,8 @@ git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog
 cd ~/inbox-catalog
 ```
 
-No `pip install` is needed to try the demo — the offline path runs on the Python
-standard library alone.
+The plugin and clone paths need no `pip install` to try the demo — the offline
+path runs on the Python standard library alone.
 
 ---
 
@@ -86,7 +92,8 @@ the short version:
    export INBOX_IMAP_PASSWORD='your-app-password'
    ```
 
-4. **Install the real-mail deps once** (image downloads need `requests`):
+4. **Install the real-mail deps once** (image downloads need `requests`; skip
+   this if you `pip install`ed — those deps came with it):
 
    ```bash
    pip3 install --break-system-packages -r requirements.txt
@@ -142,7 +149,7 @@ so a periodic re-ingest keeps everything current with no manual bookkeeping.
 
 | Symptom | Fix |
 |---|---|
-| `No module named inboxcatalog` | You're not in the engine folder. `cd` into the repo (or `$CLAUDE_PLUGIN_ROOT`), then retry. |
+| `No module named inboxcatalog` | Either `pip install inbox-catalog` (then it works from anywhere), or `cd` into the repo (or `$CLAUDE_PLUGIN_ROOT`) and retry. |
 | Real inbox catalogs ~0 items | The default profile only knows Amazon/board-game shops. That's expected — use `--profile amazon`, or write a profile for your shops. |
 | `--reindex`/`lookup` errors on numpy | Photo search is optional: `pip3 install --break-system-packages 'inbox-catalog[embed]'`. |
 | Not sure what's configured | `python3 -m inboxcatalog doctor`. |
