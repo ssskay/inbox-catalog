@@ -415,7 +415,24 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def _tolerate_legacy_console() -> None:
+    """Reports contain emoji; a cp1252 console (Windows with redirected
+    output) must degrade them to '?' rather than die on UnicodeEncodeError.
+    Only the error handler changes — utf-8 terminals are untouched."""
+    for stream in (sys.stdout, sys.stderr):
+        # getattr: sys.stdout is typed TextIO, which doesn't declare
+        # reconfigure(); non-TextIOWrapper stand-ins genuinely lack it.
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is None:
+            continue
+        try:
+            reconfigure(errors="replace")
+        except ValueError:
+            pass
+
+
 def main(argv=None) -> int:
+    _tolerate_legacy_console()
     args = build_parser().parse_args(argv)
     log = logutil.setup(debug=args.debug)
     log.info("data dir: %s (%s)", config.DATA_DIR, config.DATA_DIR_SOURCE)
