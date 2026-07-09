@@ -74,6 +74,8 @@ secret or a mailbox. Run it any time you're unsure what's set up.
 
 ## 4. Connect your real Amazon mail
 
+![Your inbox and your catalog both live on your laptop; mail is read read-only, and a crossed-out cloud shows nothing is uploaded — no account, no server.](docs/assets/privacy-local-first.svg)
+
 The full returns tracker needs the engine to read your real mail. The recommended
 way is a **Gmail app password** (read-only, revocable). Full detail with
 screenshots-level steps is in [`docs/connect-gmail.md`](docs/connect-gmail.md);

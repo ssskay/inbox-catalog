@@ -27,6 +27,8 @@ Budget apps don't help, because they only see *who you paid* (some cryptic Shopi
 or PayPal string), not *what you bought*. So they file everything under "shopping"
 and shrug.
 
+![Left: a card statement with four cryptic merchant strings, every one categorized "Shopping." Right: the same purchases in Inbox Catalog — actual item names, life-zone tags, and return deadlines.](docs/assets/bank-vs-inbox.svg)
+
 Your order emails have the actual item. This reads them back to you — no manual
 logging, no spreadsheet, no receipts to file. Just: here's what you have.
 
@@ -60,6 +62,12 @@ needs, and which always stays read-only):
   gets you the live, photo-powered version.
 - **Locked-down work account, or just privacy-minded?** Point it at a Google Takeout
   `.mbox` export — no credentials at all.
+
+![Three connection paths — Claude's Gmail connector, a read-only app password, or a Takeout export file — all converging on the same catalog.](docs/assets/three-ways-in.svg)
+
+And whichever path you take, everything stays on your machine:
+
+![Your inbox and your catalog both live on your laptop; mail is read read-only, and a crossed-out cloud shows nothing is uploaded — no account, no server.](docs/assets/privacy-local-first.svg)
 
 Want to see it work before connecting anything? There's a zero-setup demo built
 in. 👇
@@ -130,9 +138,13 @@ unrouted (1) — needs your call:
 💰 Spend flags: 1 item over $75 · 5 orders within 7 days
 ```
 
+![Four emails about one order — confirmed, shipped, delivered, window closing — merging into a single catalog item with a 30-day return countdown showing 15 days left.](docs/assets/item-lifecycle.svg)
+
 Zones are generic out of the box and fully user-configurable — drop your own
 taxonomy in a local, gitignored config file (see
 [`references/life-zone-routing.md`](references/life-zone-routing.md)).
+
+![Purchases routing into six life-zone buckets — Crafting, Fandom and Fun, Resale, Work and Office, Gifts, Fitness — with a note that the taxonomy is yours to rewrite.](docs/assets/life-zones.svg)
 
 ## Make it recognize your shops
 

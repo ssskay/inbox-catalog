@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1200 675" width="1200" height="675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline: four emails about one order — confirmed, shipped, delivered, return window — merge into a single catalog item with a 30-day return countdown. All data is synthetic.">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0d1117"/>
+
+  <!-- header -->
+  <text class="sans" x="60" y="56" font-size="30" font-weight="700" fill="#e6edf3">Four emails. One item.</text>
+  <text class="sans" x="60" y="84" font-size="16" fill="#8b949e">later emails enrich the same item — and its return deadline gets a clock</text>
+  <rect x="908" y="38" width="232" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="1024" y="58" font-size="13" fill="#8b949e" text-anchor="middle">synthetic demo data</text>
+
+  <!-- ===== the one catalog item (top center) ===== -->
+  <rect x="330" y="130" width="540" height="96" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text class="sans" x="350" y="160" font-size="15" font-weight="700" fill="#e6edf3">Craft Vinyl Roll 12x5ft Matte  ×2</text>
+  <text class="mono" x="850" y="160" font-size="13" fill="#79c0ff" text-anchor="end">51.96 USD</text>
+  <rect x="350" y="174" width="94" height="24" rx="12" fill="#21262d"/>
+  <text class="sans" x="397" y="190" font-size="12" fill="#c9d1d9" text-anchor="middle">🔨 Crafting</text>
+  <text class="mono" x="850" y="191" font-size="12.5" fill="#d29922" text-anchor="end">status: evaluate · ⏳ 15 days left</text>
+  <text class="sans" x="600" y="248" font-size="12" font-weight="600" fill="#3fb950" text-anchor="middle" letter-spacing="2">ONE CATALOG ITEM</text>
+
+  <!-- connector lines from emails up to the item -->
+  <g stroke="#30363d" stroke-width="1.5">
+    <line x1="180" y1="330" x2="480" y2="230"/>
+    <line x1="460" y1="330" x2="560" y2="230"/>
+    <line x1="740" y1="330" x2="660" y2="230"/>
+    <line x1="1020" y1="330" x2="740" y2="230"/>
+  </g>
+
+  <!-- ===== four email cards ===== -->
+  <!-- email 1 -->
+  <rect x="80" y="330" width="200" height="86" rx="8" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="96" y="356" font-size="13" font-weight="700" fill="#24292f">✉️ Order confirmed</text>
+  <text class="sans" x="96" y="378" font-size="11.5" fill="#57606a">Your Amazon.com order</text>
+  <text class="sans" x="96" y="394" font-size="11.5" fill="#57606a">#113-2591024-7364219</text>
+  <text class="mono" x="96" y="410" font-size="10.5" fill="#8b949e">Jun 18</text>
+
+  <!-- email 2 -->
+  <rect x="360" y="330" width="200" height="86" rx="8" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="376" y="356" font-size="13" font-weight="700" fill="#24292f">🚚 Shipped</text>
+  <text class="sans" x="376" y="378" font-size="11.5" fill="#57606a">Shipped: your Amazon.com</text>
+  <text class="sans" x="376" y="394" font-size="11.5" fill="#57606a">order #113-2591024-73…</text>
+  <text class="mono" x="376" y="410" font-size="10.5" fill="#8b949e">Jun 20</text>
+
+  <!-- email 3 -->
+  <rect x="640" y="330" width="200" height="86" rx="8" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="656" y="356" font-size="13" font-weight="700" fill="#24292f">✅ Delivered</text>
+  <text class="sans" x="656" y="378" font-size="11.5" fill="#57606a">Delivered: your Amazon.com</text>
+  <text class="sans" x="656" y="394" font-size="11.5" fill="#57606a">order #113-2591024-73…</text>
+  <text class="mono" x="656" y="410" font-size="10.5" fill="#8b949e">Jun 24 — the clock starts</text>
+
+  <!-- email 4 -->
+  <rect x="920" y="330" width="200" height="86" rx="8" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="936" y="356" font-size="13" font-weight="700" fill="#24292f">⏰ Window closing</text>
+  <text class="sans" x="936" y="378" font-size="11.5" fill="#57606a">Your return window for</text>
+  <text class="sans" x="936" y="394" font-size="11.5" fill="#57606a">order #113-25… closes soon</text>
+  <text class="mono" x="936" y="410" font-size="10.5" fill="#8b949e">Jul 18</text>
+
+  <!-- ===== return window bar ===== -->
+  <text class="sans" x="60" y="482" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="2">THE 30-DAY RETURN WINDOW</text>
+
+  <!-- track: Jun 24 (x=100) to Jul 24 (x=1100), today Jul 9 = 15/30 = x=600 -->
+  <rect x="100" y="500" width="1000" height="26" rx="13" fill="#21262d" stroke="#30363d"/>
+  <!-- elapsed portion -->
+  <rect x="100" y="500" width="500" height="26" rx="13" fill="#1f6feb" opacity="0.35"/>
+  <!-- today marker -->
+  <line x1="600" y1="488" x2="600" y2="540" stroke="#d29922" stroke-width="3"/>
+  <text class="sans" x="600" y="562" font-size="13" font-weight="700" fill="#d29922" text-anchor="middle">today — 15 days left</text>
+
+  <!-- endpoints -->
+  <text class="mono" x="100" y="562" font-size="12" fill="#8b949e">Jun 24 · delivered</text>
+  <text class="mono" x="1100" y="562" font-size="12" fill="#f85149" text-anchor="end">Jul 24 · window closes</text>
+  <text class="sans" x="1100" y="482" font-size="12.5" fill="#f85149" text-anchor="end">after this: decided by default 🔒</text>
+
+  <!-- bonus note -->
+  <text class="sans" x="60" y="612" font-size="14" fill="#c9d1d9">…and if a <tspan font-weight="700">refund email</tspan> shows up later, the item marks itself <tspan fill="#3fb950" font-weight="700">returned</tspan> — no bookkeeping.</text>
+
+  <!-- footer -->
+  <text class="sans" x="60" y="650" font-size="13" fill="#8b949e">github.com/ssskay/inbox-catalog   ·   pip install inbox-catalog</text>
+  <text class="sans" x="1140" y="650" font-size="13" fill="#8b949e" text-anchor="end">re-ingest any time — items enrich, never duplicate</text>
+</svg>

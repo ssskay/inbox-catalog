@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1200 675" width="1200" height="675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparison: a bank statement shows cryptic merchant strings all categorized as Shopping, while Inbox Catalog shows the actual items, their life zones, and return deadlines. All data is synthetic.">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0d1117"/>
+
+  <!-- header -->
+  <text class="sans" x="60" y="56" font-size="30" font-weight="700" fill="#e6edf3">Budget apps see who you paid</text>
+  <text class="sans" x="60" y="84" font-size="16" fill="#8b949e">your inbox knows what you bought</text>
+  <rect x="908" y="38" width="232" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="1024" y="58" font-size="13" fill="#8b949e" text-anchor="middle">synthetic demo data</text>
+
+  <!-- panel labels -->
+  <text class="sans" x="60" y="132" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="2">WHAT YOUR BANK SEES</text>
+  <text class="sans" x="660" y="132" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="2">WHAT YOUR INBOX KNOWS</text>
+
+  <!-- ===== left: card statement ===== -->
+  <rect x="60" y="145" width="500" height="440" rx="10" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="80" y="174" font-size="14" font-weight="700" fill="#24292f">💳 Card statement</text>
+  <line x1="60" y1="188" x2="560" y2="188" stroke="#d0d7de"/>
+
+  <g class="mono" font-size="13">
+    <text x="80" y="222" fill="#24292f">AMZN Mktp US*2K3LQ7</text>
+    <text x="450" y="222" fill="#24292f" text-anchor="end">−$51.96</text>
+    <text x="80" y="292" fill="#24292f">AMZN Mktp US*9WX418</text>
+    <text x="450" y="292" fill="#24292f" text-anchor="end">−$34.50</text>
+    <text x="80" y="362" fill="#24292f">AMAZON.COM*1145528</text>
+    <text x="450" y="362" fill="#24292f" text-anchor="end">−$129.99</text>
+    <text x="80" y="432" fill="#24292f">PAYPAL *STCKRS4U</text>
+    <text x="450" y="432" fill="#24292f" text-anchor="end">−$45.00</text>
+  </g>
+  <!-- category chips: all "Shopping" -->
+  <g class="sans" font-size="11.5">
+    <rect x="80" y="234" width="76" height="22" rx="11" fill="#d0d7de"/>
+    <text x="118" y="249" fill="#57606a" text-anchor="middle">Shopping</text>
+    <rect x="80" y="304" width="76" height="22" rx="11" fill="#d0d7de"/>
+    <text x="118" y="319" fill="#57606a" text-anchor="middle">Shopping</text>
+    <rect x="80" y="374" width="76" height="22" rx="11" fill="#d0d7de"/>
+    <text x="118" y="389" fill="#57606a" text-anchor="middle">Shopping</text>
+    <rect x="80" y="444" width="76" height="22" rx="11" fill="#d0d7de"/>
+    <text x="118" y="459" fill="#57606a" text-anchor="middle">Shopping</text>
+  </g>
+  <line x1="76" y1="268" x2="544" y2="268" stroke="#d0d7de"/>
+  <line x1="76" y1="338" x2="544" y2="338" stroke="#d0d7de"/>
+  <line x1="76" y1="408" x2="544" y2="408" stroke="#d0d7de"/>
+  <line x1="76" y1="478" x2="544" y2="478" stroke="#d0d7de"/>
+  <text class="sans" x="310" y="530" font-size="14" fill="#57606a" text-anchor="middle" font-style="italic">🤷  "shopping," apparently — four times</text>
+
+  <!-- vs -->
+  <circle cx="600" cy="365" r="26" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text class="sans" x="600" y="371" font-size="15" font-weight="700" fill="#8b949e" text-anchor="middle">vs</text>
+
+  <!-- ===== right: inbox catalog cards ===== -->
+  <rect x="640" y="145" width="500" height="440" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="660" y="174" font-size="14" font-weight="700" fill="#e6edf3">📦 Inbox Catalog</text>
+  <line x1="640" y1="188" x2="1140" y2="188" stroke="#30363d"/>
+
+  <!-- item card 1 -->
+  <rect x="660" y="204" width="460" height="82" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text class="sans" x="676" y="230" font-size="14" font-weight="600" fill="#e6edf3">Craft Vinyl Roll 12x5ft Matte  ×2</text>
+  <text class="mono" x="1104" y="230" font-size="13" fill="#79c0ff" text-anchor="end">51.96 USD</text>
+  <rect x="676" y="244" width="94" height="24" rx="12" fill="#21262d"/>
+  <text class="sans" x="723" y="260" font-size="12" fill="#c9d1d9" text-anchor="middle">🔨 Crafting</text>
+  <text class="mono" x="1104" y="261" font-size="12" fill="#d29922" text-anchor="end">⏳ 15 days left to return</text>
+
+  <!-- item card 2 -->
+  <rect x="660" y="298" width="460" height="82" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text class="sans" x="676" y="324" font-size="14" font-weight="600" fill="#e6edf3">Acrylic Sheets 3mm Clear, 10 pack</text>
+  <text class="mono" x="1104" y="324" font-size="13" fill="#79c0ff" text-anchor="end">34.50 USD</text>
+  <rect x="676" y="338" width="94" height="24" rx="12" fill="#21262d"/>
+  <text class="sans" x="723" y="354" font-size="12" fill="#c9d1d9" text-anchor="middle">🔨 Crafting</text>
+  <text class="mono" x="1104" y="355" font-size="12" fill="#d29922" text-anchor="end">⏳ 15 days left to return</text>
+
+  <!-- item card 3 -->
+  <rect x="660" y="392" width="460" height="82" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text class="sans" x="676" y="418" font-size="14" font-weight="600" fill="#e6edf3">Mechanical Keyboard 75% RGB</text>
+  <text class="mono" x="1104" y="418" font-size="13" fill="#79c0ff" text-anchor="end">129.99 USD</text>
+  <rect x="676" y="432" width="128" height="24" rx="12" fill="#21262d"/>
+  <text class="sans" x="740" y="448" font-size="12" fill="#c9d1d9" text-anchor="middle">💼 Work &amp; Office</text>
+  <text class="mono" x="1104" y="449" font-size="12" fill="#d29922" text-anchor="end">💰 spend flag: over $75</text>
+
+  <!-- item card 4 -->
+  <rect x="660" y="486" width="460" height="82" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text class="sans" x="676" y="512" font-size="14" font-weight="600" fill="#e6edf3">Sticker Sheets, bulk lot of 100</text>
+  <text class="mono" x="1104" y="512" font-size="13" fill="#79c0ff" text-anchor="end">45.00 USD</text>
+  <rect x="676" y="526" width="86" height="24" rx="12" fill="#21262d"/>
+  <text class="sans" x="719" y="542" font-size="12" fill="#c9d1d9" text-anchor="middle">🏷️ Resale</text>
+  <text class="mono" x="1104" y="543" font-size="12" fill="#d29922" text-anchor="end">⏳ 19 days left to return</text>
+
+  <!-- footer -->
+  <text class="sans" x="60" y="640" font-size="13" fill="#8b949e">github.com/ssskay/inbox-catalog   ·   pip install inbox-catalog</text>
+  <text class="sans" x="1140" y="640" font-size="13" fill="#8b949e" text-anchor="end">it reads the item, not the charge</text>
+</svg>

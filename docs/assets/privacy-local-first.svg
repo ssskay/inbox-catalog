@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1200 675" width="1200" height="675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Privacy diagram: your inbox and your catalog both live on your laptop. Mail is read-only, and nothing is uploaded to any cloud.">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0d1117"/>
+
+  <!-- header -->
+  <text class="sans" x="60" y="56" font-size="30" font-weight="700" fill="#e6edf3">Nothing leaves your machine</text>
+  <text class="sans" x="60" y="84" font-size="16" fill="#8b949e">your mail, the engine, and the catalog all stay local</text>
+  <rect x="908" y="38" width="232" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="1024" y="58" font-size="13" fill="#8b949e" text-anchor="middle">local-first  ·  read-only</text>
+
+  <!-- ===== laptop boundary ===== -->
+  <rect x="60" y="140" width="760" height="430" rx="16" fill="#10161d" stroke="#3fb950" stroke-width="2"/>
+  <text class="sans" x="90" y="174" font-size="14" font-weight="700" fill="#3fb950" letter-spacing="2">🔒 YOUR LAPTOP</text>
+
+  <!-- inbox mini panel -->
+  <rect x="100" y="205" width="270" height="300" rx="10" fill="#f6f8fa" stroke="#30363d"/>
+  <text class="sans" x="120" y="234" font-size="14" font-weight="700" fill="#24292f">📥 Your inbox</text>
+  <line x1="100" y1="248" x2="370" y2="248" stroke="#d0d7de"/>
+  <g class="sans" font-size="12.5" fill="#57606a">
+    <text x="120" y="276">Your Amazon.com order #113-2…</text>
+    <text x="120" y="308">Shipped: your Amazon.com ord…</text>
+    <text x="120" y="340">Delivered: your Amazon.com o…</text>
+    <text x="120" y="372">Your return window closes soon</text>
+    <text x="120" y="404">Order confirmation: Wingspan</text>
+    <text x="120" y="436" font-style="italic" fill="#8b949e">…2,842 more</text>
+  </g>
+  <text class="sans" x="235" y="486" font-size="11.5" fill="#57606a" text-anchor="middle" font-style="italic">never modified — look, don't touch</text>
+
+  <!-- arrow -->
+  <text class="sans" x="431" y="330" font-size="12" font-weight="600" fill="#3fb950" text-anchor="middle">read-only</text>
+  <path d="M 392 348 L 448 348 L 448 336 L 470 356 L 448 376 L 448 364 L 392 364 Z" fill="#3fb950"/>
+
+  <!-- catalog mini panel -->
+  <rect x="492" y="205" width="290" height="300" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="512" y="234" font-size="14" font-weight="700" fill="#e6edf3">📦 Your catalog</text>
+  <line x1="492" y1="248" x2="782" y2="248" stroke="#30363d"/>
+  <g class="mono" font-size="12" fill="#c9d1d9">
+    <text x="512" y="278">🔨 Craft Vinyl Roll 12x5ft</text>
+    <text x="512" y="303" fill="#d29922">   ⏳ 15 days left to return</text>
+    <text x="512" y="334">🌟 Manga Volume 1</text>
+    <text x="512" y="359" fill="#d29922">   ⏳ 17 days left to return</text>
+    <text x="512" y="390">💼 Mechanical Keyboard 75%</text>
+    <text x="512" y="415" fill="#d29922">   ⏳ 19 days left to return</text>
+  </g>
+  <text class="sans" x="637" y="486" font-size="11.5" fill="#8b949e" text-anchor="middle" font-style="italic">a SQLite file in a folder — delete it, it's gone</text>
+
+  <!-- ===== the cloud, crossed out ===== -->
+  <g>
+    <path d="M 920 275
+             a 38 38 0 0 1 42 -34
+             a 52 52 0 0 1 98 8
+             a 34 34 0 0 1 12 66
+             l -128 0
+             a 32 32 0 0 1 -24 -40 z" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <text class="sans" x="1002" y="200" font-size="14" fill="#8b949e" text-anchor="middle">the cloud</text>
+    <line x1="912" y1="222" x2="1092" y2="330" stroke="#f85149" stroke-width="6" stroke-linecap="round"/>
+    <line x1="1092" y1="222" x2="912" y2="330" stroke="#f85149" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g class="sans" font-size="14" fill="#8b949e" text-anchor="middle">
+    <text x="1002" y="392">no upload</text>
+    <text x="1002" y="420">no account</text>
+    <text x="1002" y="448">no server</text>
+    <text x="1002" y="476">no one else's computer</text>
+  </g>
+
+  <!-- bottom assurance strip -->
+  <g class="sans" font-size="14">
+    <text x="90" y="620"><tspan fill="#3fb950">✓</tspan><tspan fill="#c9d1d9"> read-only by protocol</tspan></text>
+    <text x="360" y="620"><tspan fill="#3fb950">✓</tspan><tspan fill="#c9d1d9"> every run is a dry run until you say --apply</tspan></text>
+    <text x="790" y="620"><tspan fill="#3fb950">✓</tspan><tspan fill="#c9d1d9"> open source — read the code yourself</tspan></text>
+  </g>
+
+  <!-- footer -->
+  <text class="sans" x="60" y="655" font-size="13" fill="#8b949e">github.com/ssskay/inbox-catalog   ·   pip install inbox-catalog</text>
+</svg>

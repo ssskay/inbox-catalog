@@ -1,0 +1,115 @@
+<svg viewBox="0 0 1200 675" width="1200" height="675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Purchases routing into life-zone buckets: Crafting, Fandom and Fun, Resale, Work and Office, Gifts, Fitness — with a note that the taxonomy is user-configurable. All data is synthetic.">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0d1117"/>
+
+  <!-- header -->
+  <text class="sans" x="60" y="56" font-size="30" font-weight="700" fill="#e6edf3">Your categories, not your bank's</text>
+  <text class="sans" x="60" y="84" font-size="16" fill="#8b949e">purchases route into the parts of your life they actually serve</text>
+  <rect x="908" y="38" width="232" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+  <text class="sans" x="1024" y="58" font-size="13" fill="#8b949e" text-anchor="middle">synthetic demo data</text>
+
+  <!-- ===== item pills (top) ===== -->
+  <g class="sans" font-size="12.5">
+    <rect x="70" y="140" width="188" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="164" y="160" fill="#24292f" text-anchor="middle">Craft Vinyl Roll 12x5ft ×2</text>
+
+    <rect x="120" y="185" width="170" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="205" y="205" fill="#24292f" text-anchor="middle">Acrylic Sheets, 10 pack</text>
+
+    <rect x="330" y="140" width="160" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="410" y="160" fill="#24292f" text-anchor="middle">Anime Figure 4 inch</text>
+
+    <rect x="390" y="185" width="140" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="460" y="205" fill="#24292f" text-anchor="middle">Manga Volume 1</text>
+
+    <rect x="540" y="140" width="180" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="630" y="160" fill="#24292f" text-anchor="middle">Sticker Sheets, lot of 100</text>
+
+    <rect x="640" y="185" width="200" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="740" y="205" fill="#24292f" text-anchor="middle">Mechanical Keyboard 75%</text>
+
+    <rect x="760" y="140" width="190" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="855" y="160" fill="#24292f" text-anchor="middle">Baby Milestone Blanket</text>
+
+    <rect x="990" y="140" width="150" height="30" rx="15" fill="#f6f8fa"/>
+    <text x="1065" y="160" fill="#24292f" text-anchor="middle">Yoga Mat Extra Thick</text>
+  </g>
+
+  <!-- ===== routing lines ===== -->
+  <g fill="none" stroke="#30363d" stroke-width="1.5">
+    <path d="M 164 172 C 164 240, 150 260, 148 300"/>
+    <path d="M 205 217 C 205 250, 160 270, 150 300"/>
+    <path d="M 360 172 C 330 220, 320 250, 318 300"/>
+    <path d="M 460 217 C 460 250, 345 270, 334 300"/>
+    <path d="M 630 172 C 630 240, 510 260, 505 300"/>
+    <path d="M 740 217 C 740 250, 690 270, 683 300"/>
+    <path d="M 870 172 C 870 240, 865 260, 861 300"/>
+    <path d="M 1065 172 C 1065 240, 1045 260, 1039 300"/>
+  </g>
+
+  <!-- ===== six zone buckets ===== -->
+  <!-- bucket geometry: w=170, gap ~8, y=300..470 -->
+  <g>
+    <rect x="63" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="148" y="348" font-size="30" text-anchor="middle">🔨</text>
+    <text class="sans" x="148" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Crafting</text>
+    <text class="sans" x="148" y="400" font-size="12" fill="#8b949e" text-anchor="middle">maker &amp; craft supplies</text>
+    <text class="mono" x="148" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">2 items</text>
+    <text class="mono" x="148" y="460" font-size="11.5" fill="#d29922" text-anchor="middle">2 still returnable</text>
+  </g>
+  <g>
+    <rect x="241" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="326" y="348" font-size="30" text-anchor="middle">🌟</text>
+    <text class="sans" x="326" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Fandom &amp; Fun</text>
+    <text class="sans" x="326" y="400" font-size="12" fill="#8b949e" text-anchor="middle">collecting &amp; self-care</text>
+    <text class="mono" x="326" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">2 items</text>
+    <text class="mono" x="326" y="460" font-size="11.5" fill="#f85149" text-anchor="middle">1 window expired!</text>
+  </g>
+  <g>
+    <rect x="419" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="504" y="348" font-size="30" text-anchor="middle">🏷️</text>
+    <text class="sans" x="504" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Resale</text>
+    <text class="sans" x="504" y="400" font-size="12" fill="#8b949e" text-anchor="middle">inventory &amp; logistics</text>
+    <text class="mono" x="504" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">1 item</text>
+    <text class="mono" x="504" y="460" font-size="11.5" fill="#d29922" text-anchor="middle">1 still returnable</text>
+  </g>
+  <g>
+    <rect x="597" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="682" y="348" font-size="30" text-anchor="middle">💼</text>
+    <text class="sans" x="682" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Work &amp; Office</text>
+    <text class="sans" x="682" y="400" font-size="12" fill="#8b949e" text-anchor="middle">desk &amp; job equipment</text>
+    <text class="mono" x="682" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">1 item</text>
+    <text class="mono" x="682" y="460" font-size="11.5" fill="#d29922" text-anchor="middle">💰 1 spend flag</text>
+  </g>
+  <g>
+    <rect x="775" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="860" y="348" font-size="30" text-anchor="middle">🎁</text>
+    <text class="sans" x="860" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Gifts</text>
+    <text class="sans" x="860" y="400" font-size="12" fill="#8b949e" text-anchor="middle">presents for others</text>
+    <text class="mono" x="860" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">1 item</text>
+    <text class="mono" x="860" y="460" font-size="11.5" fill="#d29922" text-anchor="middle">1 still returnable</text>
+  </g>
+  <g>
+    <rect x="953" y="300" width="170" height="180" rx="10" fill="#161b22" stroke="#30363d"/>
+    <text class="sans" x="1038" y="348" font-size="30" text-anchor="middle">🏃</text>
+    <text class="sans" x="1038" y="378" font-size="14" font-weight="700" fill="#e6edf3" text-anchor="middle">Fitness</text>
+    <text class="sans" x="1038" y="400" font-size="12" fill="#8b949e" text-anchor="middle">movement &amp; nutrition</text>
+    <text class="mono" x="1038" y="438" font-size="13" fill="#79c0ff" text-anchor="middle">1 item</text>
+    <text class="mono" x="1038" y="460" font-size="11.5" fill="#8b949e" text-anchor="middle">window closed</text>
+  </g>
+
+  <!-- customization note -->
+  <rect x="63" y="510" width="1060" height="76" rx="10" fill="#10161d" stroke="#3fb950"/>
+  <text class="sans" x="90" y="542" font-size="15" font-weight="600" fill="#e6edf3">✏️  These six are just the defaults.</text>
+  <text class="sans" x="90" y="566" font-size="13.5" fill="#8b949e">Rename them, replace them, invent your own — one local config file, and it never leaves your machine or your fork.</text>
+
+  <!-- footer -->
+  <text class="sans" x="60" y="640" font-size="13" fill="#8b949e">github.com/ssskay/inbox-catalog   ·   pip install inbox-catalog</text>
+  <text class="sans" x="1140" y="640" font-size="13" fill="#8b949e" text-anchor="end">sorted by the life you actually live</text>
+</svg>
