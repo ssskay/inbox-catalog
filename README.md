@@ -1,6 +1,7 @@
 # Inbox Catalog
 
 [![PyPI](https://img.shields.io/pypi/v/inbox-catalog)](https://pypi.org/project/inbox-catalog/)
+[![CI](https://github.com/ssskay/inbox-catalog/actions/workflows/ci.yml/badge.svg)](https://github.com/ssskay/inbox-catalog/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://pypi.org/project/inbox-catalog/)
 
