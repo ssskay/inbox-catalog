@@ -39,7 +39,7 @@ local folder first — no GitHub needed yet.
 **1a. Confirm the engine runs** (plain terminal, from the repo root):
 
 ```bash
-cd ~/inbox-catalog
+cd ~/Code/inbox-catalog
 INBOX_DATA_DIR=$(mktemp -d) python3 -m inboxcatalog --profile amazon --ingest --fixtures --apply
 INBOX_DATA_DIR=$(mktemp -d) python3 -m inboxcatalog --profile amazon --returns
 ```
@@ -52,7 +52,7 @@ split. No `pip install`, no credentials. If this works, the hard part is done.
 Code — they won't run from a script), run:
 
 ```
-/plugin marketplace add ~/inbox-catalog
+/plugin marketplace add ~/Code/inbox-catalog
 /plugin install inbox-catalog@inbox-catalog
 ```
 
@@ -132,6 +132,42 @@ When you change the skill or engine:
 
 Tagging a release (`git tag v0.1.1 && git push --tags`) is optional but lets you
 pin the marketplace to a tag later (`/plugin marketplace add ssskay/inbox-catalog@v0.1.1`).
+
+---
+
+## Step 5 — Attach the `.skill` bundles to the GitHub release
+
+Each skill also ships as a standalone `.skill` file (a zip you drop straight into
+Claude, or clone into `~/.claude/skills/`) so people can grab a single skill
+without the whole plugin. Rebuild and attach them on every tagged release, right
+after Step 4:
+
+```bash
+# 1. Build the three bundles into dist/ (logs exactly what goes into each).
+scripts/build_skills.sh
+
+# 2. Attach them to the release for the current tag (create it first if needed).
+gh release view v0.1.1 >/dev/null 2>&1 || gh release create v0.1.1 --generate-notes
+gh release upload v0.1.1 \
+  dist/inbox-catalog.skill \
+  dist/amazon-tracker.skill \
+  dist/extract-purchase-items.skill \
+  --clobber
+```
+
+`scripts/build_skills.sh` builds the file list from `git ls-files`, so untracked
+and gitignored files (`__pycache__`, `data/`, `.DS_Store`, the private
+`profiles/zones.local.json`) never leak in; `tests/`, `dist/`, and `references/`
+are left out by design. What lands in each bundle:
+
+| Bundle | Contents |
+|---|---|
+| `inbox-catalog.skill` | `SKILL.md` + the full `inboxcatalog/` engine (so the offline demo runs standalone) + `docs/connect-gmail.md`. |
+| `amazon-tracker.skill` | `SKILL.md` + `docs/connect-gmail.md`. A thin wrapper — it finds the engine at runtime, so no engine copy. |
+| `extract-purchase-items.skill` | `SKILL.md` + the `examples/` golden pairs. Pure-instruction skill; the test harness is excluded. |
+
+The `--clobber` flag overwrites same-named assets, so re-running is safe. Verify
+with `gh release view v0.1.1 --json assets --jq '.assets[].name'`.
 
 ---
 

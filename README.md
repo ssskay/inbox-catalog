@@ -101,6 +101,25 @@ Not on the plugin system but want the Claude skills? Copy the folder in instead:
 git clone https://github.com/ssskay/inbox-catalog ~/.claude/skills/inbox-catalog
 ```
 
+### Install as a Claude skill
+
+Prefer a single-file skill over the whole plugin? Each skill is packaged as a
+`.skill` bundle (a zip you can drop straight into Claude) on the
+[Releases page](https://github.com/ssskay/inbox-catalog/releases/latest):
+
+| Skill | What it does |
+|---|---|
+| [`inbox-catalog.skill`](https://github.com/ssskay/inbox-catalog/releases/latest/download/inbox-catalog.skill) | The full engine skill — turns order/shipment/receipt emails into a structured catalog (name, maker, price, date, photo). Bundles the `inboxcatalog` engine, so the offline demo and every dry run work standalone. |
+| [`amazon-tracker.skill`](https://github.com/ssskay/inbox-catalog/releases/latest/download/amazon-tracker.skill) | The Amazon returns tracker — a **keep / return / evaluate / returned** state and return-window clock per item, plus life-zone triage. A thin wrapper that drives the same engine. |
+| [`extract-purchase-items.skill`](https://github.com/ssskay/inbox-catalog/releases/latest/download/extract-purchase-items.skill) | Extracts clean, structured line-items (name, maker, price, currency, quantity, order id) from a single order/receipt email — any retailer, no domain assumptions. Ships the golden example pairs it's tested against. |
+
+Download the one you want and drop it into Claude, or clone the skill folders
+straight into your skills directory:
+
+```bash
+git clone https://github.com/ssskay/inbox-catalog ~/.claude/skills/inbox-catalog
+```
+
 **New here?** [`GETTING-STARTED.md`](GETTING-STARTED.md) walks you from the demo to
 your first real-mail run, step by step. Not sure what's set up? Run
 `python3 -m inboxcatalog doctor`.
