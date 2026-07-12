@@ -26,7 +26,7 @@ written until you confirm.
    [inbox-catalog](https://github.com/ssskay/inbox-catalog), the generic
    email→catalog core — one engine, many collections):
 
-       git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog
+       git clone https://github.com/ssskay/inbox-catalog ~/Code/inbox-catalog
 
 2. Copy this `amazon-tracker/` folder into `~/.claude/skills/`
 3. Open Claude Code

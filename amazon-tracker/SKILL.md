@@ -41,10 +41,10 @@ however it was installed. You just need that module importable:
      inbox-catalog **plugin**, and the engine sits at the plugin root, else
   2. `$INBOX_CATALOG_ROOT` if set, else
   3. an `inbox-catalog/` folder next to this skill folder, else
-  4. `~/inbox-catalog`, else `~/.claude/skills/inbox-catalog`.
+  4. `~/Code/inbox-catalog`, else `~/.claude/skills/inbox-catalog`.
 
   If none exists, have the user get it (`pip install inbox-catalog`, or
-  `git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog`), then
+  `git clone https://github.com/ssskay/inbox-catalog ~/Code/inbox-catalog`), then
   `cd` into the engine root (e.g. `cd "$CLAUDE_PLUGIN_ROOT"` for a plugin).
 
 `$CLAUDE_PLUGIN_ROOT` locates **skill assets**, not the engine — a pip install

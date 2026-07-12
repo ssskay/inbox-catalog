@@ -32,8 +32,8 @@ pip install inbox-catalog
 **Or clone it** (works with or without the plugin system):
 
 ```bash
-git clone https://github.com/ssskay/inbox-catalog ~/inbox-catalog
-cd ~/inbox-catalog
+git clone https://github.com/ssskay/inbox-catalog ~/Code/inbox-catalog
+cd ~/Code/inbox-catalog
 ```
 
 The plugin and clone paths need no `pip install` to try the demo — the offline
